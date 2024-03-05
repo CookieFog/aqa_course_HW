@@ -6,9 +6,11 @@ while value < 5:
     new_word = Enter_word[::-1]
     if Enter_word == new_word:
         print("+")
+        value += 5
     else:
         print("-")
-print("successful end")
+        print("word is not polyndrome")
+print("Ended operation!")
 
 
 # ******************Task#2 date 04.03.2024******************
@@ -22,11 +24,12 @@ while value < 5:
         print("NO")
     else:
         print("YES")
-print("successful end")
+        value += 5
+print("Ended operation!")
 
 # ******************* Task#3 date 04.03.2024*****************
 value = 0
-while value < 3:
+while value < 5:
     value += 1
     email = str(input("Please enter valid email"))
 
@@ -35,24 +38,25 @@ while value < 3:
         print("NO,Please enter valid email form")
     else:
         print("validation successful!")
+        value += 5
+print("Ended operation!")
 
 # ******************* Task#4 date 05.03.2024*****************
 value = 0
 while value < 5:
     value += 1
     text = str(input("Please enter text"))
+    splited = text.split(' ')
 
-    a = text.split(' ')
-    b = a[-2:]
-    c = a[-3:]
-    if b > a:
+    if len(splited) >= 3:
         print("Successful! last 3 words from list")
-        print(c)
+
+        value += 5
+
     else:
         print("Error!. Text shoud to contain more than 3 words !")
-        print(text.split(' '))
         print("Your text have less than 3 elements")
         print(text.count(' '))
+        print(text.split(' '))
+print("Ended operation!")
 
-
-# count()	Повертає кількість вказаних елементів у списку.
