@@ -17,17 +17,41 @@
 
 # Homework task #2 date 07.03.2024
 
-list_3 = ["FirstItem", "FriendsList", "MyTuple"]
-
-list_3[1] = "Friends_list"
-list_3[0] = "First_item"
-list_3[2] = "My_Tuple"
-
-
-print(list_3)
+# list_3 = ["FirstItem", "FriendsList", "MyTuple"]
+#
+# list_3[1] = "Friends_list"
+# list_3[0] = "First_item"
+# list_3[2] = "My_Tuple"
+#
+#
+# print(list_3)
 
 # Homework task #3 date 07.03.2024
 
+# dictionary_1 = {'PHP': 'PHP creator is Rasmus Lerdorf', 'Python': 'Python creator isGuido van Rossum',
+# 'C++': 'C++ creator is Björn Stroustrup', 'C#': 'C# creator isDennis Ritchie'
+#                 }
+#
+#
+# if 'PHP' and 'Python' and 'C++' and 'C#' in dictionary_1:
+#     print(dictionary_1.get('PHP'),". NO it isn't!")
+#     print("My favorite programming language is Python. It was created by Guido van Rossum.")
+#     print(dictionary_1.get('Python'),". Yes this is it:)")
+#     print(dictionary_1.get('C++'), ". NO it isn't!")
+#     print("My favorite programming language is Python. It was created by Guido van Rossum.")
+#     print(dictionary_1.get('C#'), ". NO it isn't!")
+#     print("My favorite programming language is Python. It was created by Guido van Rossum.")
+#
+# del dictionary_1['PHP']
+#
+# print(dictionary_1)
 
+# Homework task #4 date 07.03.2024
 
+names = ['Jack', 'Leon', 'Alice', None, 32, 'Bob']
 
+print(names.index("jack"))
+# for value in names:
+#     print(names.index(1))
+#
+#     continue
