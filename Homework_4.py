@@ -71,5 +71,27 @@
 #         print("!unexpected error loop is closed!")
 #     break
 
-# Homework task #5 date 09.03.2024
+# Homework task #6 date 09.03.2024
+# dict_1 = input("awaiting letter")
+# dictionary = {'Special characters': 0, 'letters': 0, 'numbers': 0}
+#
+# for x in dict_1:
+#     if x.isalpha():
+#         dictionary['letters'] += 1
+#     elif x.isdigit():
+#         dictionary['numbers'] += 1
+#     else:
+#         dictionary['Special characters'] += 1
+# ", ".join(dictionary)
+#
+# print(", ".join(dictionary))
 
+dict_1 = input("awaiting letter")
+dictionary = {}
+
+for i in dict_1:
+    if i in dict_1:
+        dictionary['Letters'] += 1
+", ".join(dictionary)
+
+print(", ".join(dictionary))
