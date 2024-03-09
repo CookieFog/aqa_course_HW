@@ -48,10 +48,28 @@
 
 # Homework task #4 date 07.03.2024
 
-names = ['Jack', 'Leon', 'Alice', None, 32, 'Bob']
-
-print(names.index("jack"))
-# for value in names:
-#     print(names.index(1))
+# names = ['Jack', 'Leon', 'Alice', None, 32, 'Bob']
+#
+#
+# for names in ['Jack', 'Leon', 'Alice', 'Bob']:
+#
+#     print(names)
 #
 #     continue
+
+# Homework task #5 date 09.03.2024
+
+# types = [1, 10, 2, 12, {'key': 'value'}]    # Please choose any value in field {'key': 'value'} example 544
+# for value in types:
+#     if (isinstance(types[0], int) and isinstance(types[1], int)
+#             and isinstance(types[2], int) and isinstance(types[3], int) and isinstance(types[4], int)):
+#         print("True")
+#         print(value)
+#         continue
+#     else:
+#         print("loop 'For' is not working with float. This program working only with int! ")
+#         print("!unexpected error loop is closed!")
+#     break
+
+# Homework task #5 date 09.03.2024
+
