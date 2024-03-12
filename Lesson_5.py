@@ -43,38 +43,38 @@ while value < 2:
         print("Calculation process has ended")
 
 # Homework_5_3 Lesson_5-------------------------------------------------------------------------------------------------
+import sys
 
-value = 0
-while value < 2:
-    try:
-        first_number = input("Please enter first number for calculation process. For exit enter Exit")
-        if first_number == 'Exit':
-            break
-        operator = input("Please choose operator")
-        second_number = float(input("Please enter second number for calculation process"))
-        first_number = float(first_number)
+try:
+    first_number = input("Please enter first number for calculation process. For exit enter Exit")
+    if first_number == 'Exit':
+        print("bye!")
+        sys.exit()
+    operator = input("Please choose operator")
+    second_number = float(input("Please enter second number for calculation process"))
+    first_number = float(first_number)
 
-        if operator == "+":
-            print(first_number + second_number)
-            value += 1
-        elif operator == "-":
-            print(first_number - second_number)
-            value += 1
-        elif operator == "*":
-            print(first_number * second_number)
-            value += 1
-        elif operator == "/":
-            print(first_number / second_number)
-            value += 1
+    if operator == "+":
+        print(first_number + second_number)
 
-    except ZeroDivisionError as error:
+    elif operator == "-":
+        print(first_number - second_number)
 
-        print("Operation failed. Please enter right number! ZeroDivisionError")
+    elif operator == "*":
+        print(first_number * second_number)
 
-    except ValueError as error:
-        print("Operation failed please enter valid value")
+    elif operator == "/":
+        print(first_number / second_number)
 
-    else:
-        print("OK")
-    finally:
-        print("Calculator version 3.2")
+
+except ZeroDivisionError as error:
+
+    print("Operation failed. Please enter right number! ZeroDivisionError")
+
+except ValueError as error:
+    print("Operation failed please enter valid value")
+
+else:
+    print("OK")
+finally:
+    print("Calculator version 3.2")
