@@ -5,4 +5,3 @@ def sum_range(start, end):
         print(sum_range(start, end))
 
 
-
