@@ -26,3 +26,5 @@ import math
 something = input("awaiting something")
 
 New_dictionary = {}
+
+def
