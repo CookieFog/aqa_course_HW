@@ -12,11 +12,17 @@ import math
 
 # Homework_lesson_6 #2 date 17.03.2024
 
-def square(x):
-    y = 2
-    print('периметр квадрата', '=', x * 4)
-    print('площа квадрата', '=', pow(x, y))
-    print(sqrt(2))
+# def square(x):
+#     y = 2
+#     print('периметр квадрата (P)', '=', x * 4)
+#     print('площа квадрата (S)', '=', pow(x, y))
+#     print('діагональ квадрата (d)', '=', math.sqrt(2)*x)
+#
+#
+# square(3)
 
+# Homework_lesson_6 #3 date 17.03.2024
 
-square(3)
+something = input("awaiting something")
+
+New_dictionary = {}
