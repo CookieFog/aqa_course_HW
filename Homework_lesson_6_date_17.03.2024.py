@@ -1,6 +1,5 @@
 import math
 
-
 # Homework_lesson_6 #1 date 17.03.2024
 # def sum_range(start, end):
 #     if start > end:
@@ -23,8 +22,14 @@ import math
 
 # Homework_lesson_6 #3 date 17.03.2024
 
+
 something = input("awaiting something")
 
-New_dictionary = {}
 
-def
+def func_1(x):
+
+
+
+result = filter(func_1(x), something)
+
+print(list(result))
