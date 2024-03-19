@@ -41,18 +41,30 @@ import math
 # result = eval('check_data_type({})')
 
 # **********************************
-value = input("something to write")
+# value = input("something to write")
+#
+#
+# result = eval(value)
+# print(type(result))
+#
+#
+# def check_data_type(data: str):
+#     try:
+#         return type(eval(data))
+#     except:
+#         pass
+#
 
 
-result = eval(value)
-print(type(result))
+user_input = input("something to write")
 
 
 def check_data_type(data: str):
     try:
-        return type(eval(data))
-    except:
-        pass
+        result = eval(data)
+        print(f"User is going to work with {type(result).__name__}")
+    except Exception as e:
+        print(f'Something went wrong. {e}')
 
 
 result = eval('check_data_type({})')
