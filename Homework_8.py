@@ -36,23 +36,23 @@ try:
         Sum_2 = salary_2 * currency
         Sum_3 = salary_3 * currency
         # file.writelines(' Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec')
+        file.write("Employee1\n")
         if Sum_1 >= 39160:
             while value < 12:
-                print("ТЫ тупой")
-                file.write('39160\n')
-                # file.write('46992 ')
-                # file.write('58740 ')
+
+                file.write('    39160\n')
                 value += 1
+        file.write("    Employee2\n")
 
         if Sum_2 >= 46991:
             while value < 24:
-                print("ТЫ тупой")
-                file.write('46992\n')
 
+                file.write('46992\n')
                 value += 1
+            file.write("Employee3\n")
         if Sum_3 >= 58739:
             while value < 36:
-                file.write('58740\n')
+                file.write('58739\n')
                 value += 1
 
 except:
