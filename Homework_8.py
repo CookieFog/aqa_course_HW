@@ -1,5 +1,7 @@
 # Homework_8_1
 import os
+import csv
+
 try:
 
     with open('C:/Users/user/Desktop/test_file.csv', mode='w') as file:
@@ -35,3 +37,5 @@ try:
 except:
     print("HMM,something went wrong!")
 
+with os.mkdir('C:/Users/user/Desktop/salaries_uah.csv'):
+    file.write('hi')
