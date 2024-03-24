@@ -41,8 +41,13 @@ import csv
 # with os.mkdir('C:/Users/user/Desktop/salaries_uah.csv'):
 #     file.write('hi')
 
+# __file__ = open('C:/Users/user/Desktop/test_file.csv', mode='r')
 
-path = os.path.dirname('C:/Users/user/Desktop/test_file.csv')
+with open('C:/Users/user/Desktop/test_file.csv', mode='w') as __file__:
 
-with open(path, mode='r') as file:
-    path.write = ("frffr")
+# path = os.path.dirname(__file__)
+# print(__file__.readline())
+
+    print(__file__)
+
+    __file__.write("f12rf")
