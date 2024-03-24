@@ -42,12 +42,21 @@ import csv
 #     file.write('hi')
 
 # __file__ = open('C:/Users/user/Desktop/test_file.csv', mode='r')
+try:
+    with open('C:/Users/user/Desktop/test_file.csv', mode='r') as __file__:
 
-with open('C:/Users/user/Desktop/test_file.csv', mode='w') as __file__:
+        print(__file__.readline())
+    currency = 39.16
+    salary_1 = 1000  # $
+    salary_2 = 1200  # $
+    salary_3 = 1500  # $
+    Sum_1 = salary_1 * currency
+    Sum_2 = salary_2 * currency
+    Sum_3 = salary_3 * currency
+    print(Sum_1)
 
-# path = os.path.dirname(__file__)
-# print(__file__.readline())
 
-    print(__file__)
 
-    __file__.write("f12rf")
+
+except:
+    print("Hm,  something go wrong error!")
