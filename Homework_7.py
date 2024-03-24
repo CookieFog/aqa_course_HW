@@ -10,26 +10,23 @@ b = filter(lambda x: x % 2 == 0, my_list_2)
 for x in b:
     print(x)
 
+
 # Homework_7_2
 
 
-
-
-
-
-
-
-
-
-#Homework_7_3
+# Homework_7_3
 
 def print_hi():
     print("Hi")
 
+
 def print_bye():
     print("Bye")
+
 
 def evaluate():
     user_input = input("Please enter print_hi() or print_bye()")
     eval(user_input)
+
+
 evaluate()
