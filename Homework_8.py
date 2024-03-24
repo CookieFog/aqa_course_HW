@@ -41,11 +41,13 @@ import csv
 # with os.mkdir('C:/Users/user/Desktop/salaries_uah.csv'):
 #     file.write('hi')
 
-# __file__ = open('C:/Users/user/Desktop/test_file.csv', mode='r')
+__file__ = open('C:/Users/user/Desktop/test_file.csv', mode='r')
+
 try:
     with open('C:/Users/user/Desktop/test_file.csv', mode='r') as __file__:
-
-        print(__file__.readline())
+        # path = os.path.dirname('__file__')
+        print(__file__)
+        print(__file__.readlines())
     currency = 39.16
     salary_1 = 1000  # $
     salary_2 = 1200  # $
@@ -53,10 +55,37 @@ try:
     Sum_1 = salary_1 * currency
     Sum_2 = salary_2 * currency
     Sum_3 = salary_3 * currency
-    print(Sum_1)
+    list_1 = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',  'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    list_2 = ['Employee1', int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1),int(Sum_1),
+              int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1)]
 
+    list_3 = ['Employee2', int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2),
+              int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2)]
 
+    list_4 = ['Employee3', int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3),
+              int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3)]
+    print(list_2)
+    print(list_3)
+    print(list_4)
 
+    with open('salaries_uah.csv', mode='w') as file:
+        print('ok')
+
+        file.write('Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec\n')
+        file.write('Employee1, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160\n')
+        file.write('Employee2, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991\n')
+        file.write('Employee3, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739\n')
 
 except:
     print("Hm,  something go wrong error!")
+
+# path = os.path.dirname("C:/Users/user/Desktop/test_file.csv'")
+#
+# result_path = os.path.join(path, 'test_file.csv')
+#
+# with open(result_path, mode="r") as file:
+#     print("ok")
+#
+# print(result_path.readlines())
+#
+# # 'str' object has no attribute 'readlines'
