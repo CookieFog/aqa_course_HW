@@ -12,8 +12,23 @@
 
 
 # Homework_7_2
-def DOD(x:int):
-    return lambda y :
+try:
+    def DOD(x: int):
+        return lambda y: pow(x, y)
+
+
+    def test(arg):
+        if callable(arg):
+            print('start')
+            print(arg(2))  # pow(x, y)
+            print('finish')
+        else:
+            print("Hm, something went wrong!")
+
+
+    test(DOD(10))
+except:
+    print("Error544")
 
 # Homework_7_3
 
