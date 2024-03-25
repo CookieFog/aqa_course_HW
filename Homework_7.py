@@ -25,7 +25,6 @@ try:
         else:
             print("Hm, something went wrong!")
 
-
     test(DOD(10))
 except:
     print("Error544")
