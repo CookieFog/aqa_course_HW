@@ -22,14 +22,49 @@ import math
 
 # Homework_lesson_6 #3 date 17.03.2024
 
+# ************************************
+# dictionary = "{'key': 'value'}"
+# print(type(dictionary))
+# res_of_upper = dictionary.upper()
+# print(res_of_upper)
+# result = eval(dictionary)
+# print(type(result))
+#
+#
+# def check_data_type(data: str):
+#     try:
+#         return type(eval(data))
+#     except:
+#         pass
+#
+#
+# result = eval('check_data_type({})')
 
-something = input("awaiting something")
+# **********************************
+# value = input("something to write")
+#
+#
+# result = eval(value)
+# print(type(result))
+#
+#
+# def check_data_type(data: str):
+#     try:
+#         return type(eval(data))
+#     except:
+#         pass
+#
 
 
-def func_1(x):
+user_input = input("something to write")
 
 
+def check_data_type(data: str):
+    try:
+        result = eval(data)
+        print(f"User is going to work with {type(result).__name__}")
+    except Exception as e:
+        print(f'Something went wrong. {e}')
 
-result = filter(func_1(x), something)
 
-print(list(result))
+result = eval('check_data_type({})')
