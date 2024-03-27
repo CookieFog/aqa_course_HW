@@ -54,18 +54,18 @@
 
 
 # **************************
-# def print_hi():
-#     print("Hi")
-#
-#
-# def print_bye():
-#     print("Bye")
-#
-#
-# def evaluate():
-#     user_input = input("Please enter print_hi() or print_bye()")
-#     eval(user_input)
-#
-#
-# evaluate()
+def print_hi():
+    print("Hi")
+
+
+def print_bye():
+    print("Bye")
+
+
+def evaluate():
+    user_input = input("Please enter print_hi() or print_bye()")
+    eval(user_input)
+
+
+evaluate()
 # **************************
