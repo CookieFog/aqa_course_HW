@@ -41,43 +41,43 @@ import csv
 # with os.mkdir('C:/Users/user/Desktop/salaries_uah.csv'):
 #     file.write('hi')
 
-__file__ = open('C:/Users/user/Desktop/test_file.csv', mode='r')
-
-try:
-    with open('C:/Users/user/Desktop/test_file.csv', mode='r') as __file__:
-        # path = os.path.dirname('__file__')
-        print(__file__)
-        print(__file__.readlines())
-    currency = 39.16
-    salary_1 = 1000  # $
-    salary_2 = 1200  # $
-    salary_3 = 1500  # $
-    Sum_1 = salary_1 * currency
-    Sum_2 = salary_2 * currency
-    Sum_3 = salary_3 * currency
-    list_1 = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',  'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    list_2 = ['Employee1', int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1),int(Sum_1),
-              int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1)]
-
-    list_3 = ['Employee2', int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2),
-              int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2)]
-
-    list_4 = ['Employee3', int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3),
-              int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3)]
-    print(list_2)
-    print(list_3)
-    print(list_4)
-
-    with open('salaries_uah.csv', mode='w') as file:
-        print('ok')
-
-        file.write('Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec\n')
-        file.write('Employee1, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160\n')
-        file.write('Employee2, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991\n')
-        file.write('Employee3, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739\n')
-
-except:
-    print("Hm,  something go wrong error!")
+# __file__ = open('C:/Users/user/Desktop/test_file.csv', mode='r')
+#
+# try:
+#     with open('C:/Users/user/Desktop/test_file.csv', mode='r') as __file__:
+#         # path = os.path.dirname('__file__')
+#         print(__file__)
+#         print(__file__.readlines())
+#     currency = 39.16
+#     salary_1 = 1000  # $
+#     salary_2 = 1200  # $
+#     salary_3 = 1500  # $
+#     Sum_1 = salary_1 * currency
+#     Sum_2 = salary_2 * currency
+#     Sum_3 = salary_3 * currency
+#     list_1 = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',  'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+#     list_2 = ['Employee1', int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1),int(Sum_1),
+#               int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1), int(Sum_1)]
+#
+#     list_3 = ['Employee2', int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2),
+#               int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2), int(Sum_2)]
+#
+#     list_4 = ['Employee3', int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3),
+#               int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3), int(Sum_3)]
+#     print(list_2)
+#     print(list_3)
+#     print(list_4)
+#
+#     with open('salaries_uah.csv', mode='w') as file:
+#         print('ok')
+#
+#         file.write('Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec\n')
+#         file.write('Employee1, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160, 39160\n')
+#         file.write('Employee2, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991, 46991\n')
+#         file.write('Employee3, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739, 58739\n')
+#
+# except:
+#     print("Hm,  something go wrong error!")
 
 # path = os.path.dirname("C:/Users/user/Desktop/test_file.csv'")
 #
@@ -89,3 +89,24 @@ except:
 # print(result_path.readlines())
 #
 # # 'str' object has no attribute 'readlines'
+# ****************************************
+
+currency_rate = 39
+
+
+with open('C:/Users/user/Desktop/test_file.csv', mode='r') as __file__:
+    csv_reader = csv.reader(__file__)
+    users_salaries = list(csv_reader)
+    months = users_salaries[0]
+    salaries_uah = []
+
+for row in users_salaries[1:]:
+    employee = row[0]
+    salaries = [int(salary) * currency_rate for salary in row[1:]]
+    salaries.insert(0, employee)
+    salaries_uah.append(salaries)
+with open ('salaries_uah.csv', mode='w') as file:
+    csv_writer = csv.writer(file)
+    csv_writer.writerow(months)
+    csv_writer. writerows(salaries_uah)
+
