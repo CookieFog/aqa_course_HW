@@ -100,7 +100,6 @@ with open(dir_path + '/file.csv', mode='r') as file:
     users_salaries = list(csv_reader)
     months = users_salaries[0]
     salaries_uah = []
-
 for row in users_salaries[1:]:
     employee = row[0]
     salaries = [int(salary) * currency_rate for salary in row[1:]]
