@@ -93,8 +93,9 @@ import csv
 
 currency_rate = 39
 
-
-with open('C:/Users/user/Desktop/test_file.csv', mode='r') as __file__:
+dir_path = os.path.dirname(__file__)
+file_path = os.path.join(dir_path, 'test_file.csv')
+with open(dir_path + '/file.csv', mode='r') as file:
     csv_reader = csv.reader(__file__)
     users_salaries = list(csv_reader)
     months = users_salaries[0]
@@ -105,8 +106,7 @@ for row in users_salaries[1:]:
     salaries = [int(salary) * currency_rate for salary in row[1:]]
     salaries.insert(0, employee)
     salaries_uah.append(salaries)
-with open ('salaries_uah.csv', mode='w') as file:
+with open('salaries_uah.csv', mode='w') as file:
     csv_writer = csv.writer(file)
     csv_writer.writerow(months)
-    csv_writer. writerows(salaries_uah)
-
+    csv_writer.writerows(salaries_uah)
