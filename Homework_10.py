@@ -66,7 +66,7 @@ import time
 def logger(text):
     def sub_logger_decorator(func):
         def wrap(*args, **kwargs):
-            print(f'This function {func.__name__} will sum 2 ints ')
+            print(f'This function will sum 2 ints {text} {args}')
             result = func(*args, **kwargs)
             return result
 
@@ -75,10 +75,11 @@ def logger(text):
     return sub_logger_decorator
 
 
-@logger
+@logger('Sum 2 arguments')
 def plus(x, y):
     time.sleep(1)
     return x + y
 
 
 plus(10, 20)
+print(plus(10, 20))
