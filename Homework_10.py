@@ -45,18 +45,39 @@ import time
 #
 
 
-def logger(func):
-    def wrapper(*arg, **kwargs):
-        reslut = func(*arg, **kwargs)
-        print(f'This function {func.__name__} will sum 2 ints ')
-        time.sleep(1)
-        return reslut
+# def logger(func):
+#     def wrapper(*arg, **kwargs):
+#         reslut = func(*arg, **kwargs)
+#         print(f'This function {func.__name__} will sum 2 ints ')
+#         time.sleep(1)
+#         return reslut
+#
+#     return wrapper
+#
+#
+# @logger
+# def plus(x, y):
+#     return x + y
+#
+#
+# plus(10, 20)
 
-    return wrapper
+
+def logger(text):
+    def sub_logger_decorator(func):
+        def wrap(*args, **kwargs):
+            print(f'This function {func.__name__} will sum 2 ints ')
+            result = func(*args, **kwargs)
+            return result
+
+        return wrap
+
+    return sub_logger_decorator
 
 
 @logger
 def plus(x, y):
+    time.sleep(1)
     return x + y
 
 
