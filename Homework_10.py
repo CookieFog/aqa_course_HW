@@ -5,7 +5,6 @@ import time
 # def decorator(func):
 #     def inner(*args):
 #         start = time.time()
-#         print(f'Function {func.__name__} starting working')
 #         func(*args)
 #         end = time.time()
 #         print(f'Function {func.__name__} took {end - start} time')
@@ -24,21 +23,40 @@ import time
 # Homework_10_2
 
 
-def logger(func):
-    def inner(*args):
-        start = time.time()
-        print(f'Function {func.__name__} starting working now. This func will sum 2 ints ')
-        func(*args)
-        end = time.time()
-        print(f'Function {func.__name__} took {end - start} time')
+# def logger(func):
+#     def inner(*args):
+#         start = time.time()
+#         print(f'Function {func.__name__} starting working now. This func will sum 2 ints ')
+#         func(*args)
+#         end = time.time()
+#         print(f'Function {func.__name__} took {end - start} time')
+#
+#     return inner
+#
+#
+# @logger("Plus action")
+# def plus(x, y):
+#     time.sleep(2)
+#
+#     return x + y
+#
+#
+# plus(10, 20)
+#
 
-    return inner
+
+def logger(func):
+    def wrapper(*arg, **kwargs):
+        reslut = func(*arg, **kwargs)
+        print(f'This function {func.__name__} will sum 2 ints ')
+        time.sleep(1)
+        return reslut
+
+    return wrapper
 
 
 @logger
 def plus(x, y):
-    time.sleep(2)
-    print(x + y)
     return x + y
 
 
