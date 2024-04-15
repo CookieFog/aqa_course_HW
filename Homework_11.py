@@ -1,18 +1,100 @@
 class House:
     """House parameters"""
 
-    def __init__(self, street, number, age):
+    def __init__(self, street: str):
         self.street = street
-        self.number = number
-        self.age = age
 
-    def build(self):
-        print('House street' + str(self.street) + "House number" + str(self.number) + "House age" + str(self.age))
+    @property
+    def parameters(self):
+        print(f'{self.street} is a street')
+        return self.street
+
+    @parameters.setter
+    def parameters(self, New_street):
+        self.street = New_street
+        print(f'{self.street} old street was changed street is now "{New_street}')
 
 
-House_1 = House("Ryikivska", 20, 5)
-House_2 = House("Ryikivasa", 32, 10)
+if __name__ == '__main__':
+    house = House("Ryikivska")
 
-print(House_2.number)
 
-House_1.build()
+house.parameters = 'Perejaclavckaja'
+
+print(house.parameters)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# class Fruit:
+#     def __init__(self, name: str):
+#         self._name = name
+#
+#     @property
+#     def fruit_name(self):
+#         print(f'"{self._name}" was done')
+#         return self._name
+#
+#     @fruit_name.setter
+#     def fruit_name(self, value):
+#         print(f'{self._name} is now "{value}')
+#         self._name = value
+#
+#
+# if __name__ == "__main__":
+#     fruit = Fruit('Banana')
+#
+# fruit.fruit_name = "orange"
+#
+# print(fruit.fruit_name)
