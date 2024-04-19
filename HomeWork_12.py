@@ -113,7 +113,7 @@ class MyContextManager:
         self.file.close()
 
 
-path = 'C:\Users\user\Desktop'
+path = 'C:/Users/user/Desktop/test_file.csv'
 
 with MyContextManager(file_path=path, mode='r') as file:
     print(file.readlines())
